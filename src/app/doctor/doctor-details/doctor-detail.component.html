@@ -1,0 +1,36 @@
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{ recipe.name }}</h1>
+  </div>
+</div><br>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of recipe.ingredients">
+        <b>Message : </b>{{ ingredient.name }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     <b>Slot No. : </b>{{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        [disabled]="patient"
+        class="btn btn-primary dropdown-toggle">
+        Manage Appointments <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;" (click)="onEditRecipe()">Edit Appointment</a></li>
+        <li ><a style="cursor: pointer;" (click)="onDeleteRecipe()" *ngIf="!patient" >Delete Appointment</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

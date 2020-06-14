@@ -1,0 +1,28 @@
+
+<div *ngIf="cascade">
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<div class="ocean" >
+  <div class="wave"></div>
+  <div class="wave"></div>
+</div>
+</div>
+<div style="background-image: linear-gradient(white 30%, cyan ); height:1100px; background-size:cover"
+*ngIf='!cascade'>
+<app-header></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+
+
